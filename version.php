@@ -26,11 +26,11 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->version   = 2013100200;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2014110400;        // Requires this Moodle version.
+$plugin->requires  = 2015050500;        // Requires this Moodle version.
 $plugin->component = 'filter_multiroot'; // Full name of the plugin (used for diagnostics).
-$plugin->release = '2.8.0 (Build 2013100200)';
+$plugin->release = '2.9.0 (Build 2013100200)';
 $plugin->maturity = MATURITY_RC;
 $plugin->dependencies = array('local_multiroot' => 2013100300);
 
 // Non moodle attributes.
-$plugin->codeincrement = '2.8.0000';
+$plugin->codeincrement = '2.9.0000';
