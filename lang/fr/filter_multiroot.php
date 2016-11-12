@@ -15,3 +15,4 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 $string['pluginname'] = 'Adaptateur de contenus en multidomaine';
+$string['multiroot'] = 'Adaptateur de contenus en multidomaine';
