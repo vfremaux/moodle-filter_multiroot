@@ -22,7 +22,7 @@
  */
 defined('MOODLE_INTERNAL') || die();
 
-class multiroot_filter extends moodle_text_filter {
+class filter_multiroot extends moodle_text_filter {
 
     public function filter($text) {
         global $CFG, $CFG;
