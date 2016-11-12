@@ -20,10 +20,11 @@
  * @author      valery.fremaux <valery.fremaux@gmail.com>
  * @copyright   2010 onwards Valery Fremaux (http://www.mylearningfactory.com)
  */
+defined('MOODLE_INTERNAL') || die();
 
 class multiroot_filter extends moodle_text_filter {
 
-    function filter($text) {
+    public function filter($text) {
         global $CFG, $CFG;
 
         if (empty($CFG->multiroot)) {
@@ -37,7 +38,7 @@ class multiroot_filter extends moodle_text_filter {
             /*
              * if we are in the original domain, bring back all aliases to the original domain when displaying.
              * Brings back all Alias1, Alias2, AliasN contents to Original
-             * this will not solve all crossover situations, specially for content created on Alias1 and 
+             * this will not solve all crossover situations, specially for content created on Alias1 and
              * accessed through Alias2
              */
             if (!empty($CFG->hosts_themes)) {
