@@ -15,4 +15,4 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 $string['pluginname'] = 'Multiroot content adapter';
-$string['multiroot'] = 'Multiroot content adapter';
+$string['filtername'] = 'Multiroot content adapter';

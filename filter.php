@@ -24,7 +24,7 @@ defined('MOODLE_INTERNAL') || die();
 
 class filter_multiroot extends moodle_text_filter {
 
-    public function filter($text) {
+    public function filter($text, array $options = array()) {
         global $CFG, $CFG;
 
         if (empty($CFG->multiroot)) {
