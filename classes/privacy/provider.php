@@ -14,23 +14,9 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-/**
- * Version details.
- *
- * @package     filter_multiroot
- * @category    filter
- * @copyright   2013 Valery Fremaux (valery.fremaux@gmail.com)
- * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
+namespace filter_multiroot\privacy;
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2013100200;        // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2018042700;        // Requires this Moodle version.
-$plugin->component = 'filter_multiroot'; // Full name of the plugin (used for diagnostics).
-$plugin->release = '3.5.0 (Build 2013100200)';
-$plugin->maturity = MATURITY_RC;
-$plugin->dependencies = array('local_multiroot' => 2013100300);
-
-// Non moodle attributes.
-$plugin->codeincrement = '3.5.0000';
+class provider implements \core_privacy\local\metadata\null_provider {
+}
