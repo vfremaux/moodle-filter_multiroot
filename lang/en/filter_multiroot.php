@@ -14,5 +14,8 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+// Privacy.
+$string['privacy:metadata'] = "The Multiroot filter does not store any data belonging to users";
+
 $string['pluginname'] = 'Multiroot content adapter';
 $string['filtername'] = 'Multiroot content adapter';
