@@ -31,20 +31,16 @@ class filter_multiroot extends moodle_text_filter {
             return $text;
         }
 
-        if (isset($CFG->originalwwwroot) && $CFG->originalwwwroot != $CFG->wwwroot) {
-            // If we are in an alias, translate orignal contents to current alias.
-            $text = preg_replace("#{$CFG->originalwwwroot}#", $CFG->wwwroot, $text);
-        } else {
-            /*
-             * if we are in the original domain, bring back all aliases to the original domain when displaying.
-             * Brings back all Alias1, Alias2, AliasN contents to Original
-             * this will not solve all crossover situations, specially for content created on Alias1 and
-             * accessed through Alias2
-             */
-            if (!empty($CFG->hosts_themes)) {
-                $hostdomains = implode('|', array_keys($CFG->hosts_themes));
+        // Bring back any alias to the current wwwroot.
+
+        $aliasesdomains = preg_split('/[\s,]+/', $CFG->allowmultirootdomains);
+        preg_match('#^https?\\://(.*)#', $CFG->wwwroot, $matches);
+        $protocol = $matches[0];
+        foreach ($aliasesdomains as $d) {
+            // Avoid changing self...
+            if ($d != $matches[1]) {
+                $text = preg_replace("#{$protocol}{$d}#", $CFG->wwwroot, $text);
             }
-            $text = preg_replace("#http://{$hostdomains}#", $CFG->originalwwwroot, $text);
         }
 
         return $text;
