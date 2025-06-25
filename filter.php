@@ -20,30 +20,7 @@
  * @author      valery.fremaux <valery.fremaux@gmail.com>
  * @copyright   2010 onwards Valery Fremaux (http://www.mylearningfactory.com)
  */
-defined('MOODLE_INTERNAL') || die();
+defined('MOODLE_INTERNAL') || die;
 
-class filter_multiroot extends moodle_text_filter {
-
-    public function filter($text, array $options = array()) {
-        global $CFG, $CFG;
-
-        if (empty($CFG->multiroot)) {
-            return $text;
-        }
-
-        // Bring back any alias to the current wwwroot.
-
-        $aliasesdomains = preg_split('/[\s,]+/', $CFG->allowmultirootdomains);
-        preg_match('#^https?\\://(.*)#', $CFG->wwwroot, $matches);
-        $protocol = $matches[0];
-        foreach ($aliasesdomains as $d) {
-            // Avoid changing self...
-            if ($d != $matches[1]) {
-                $text = preg_replace("#{$protocol}{$d}#", $CFG->wwwroot, $text);
-            }
-        }
-
-        return $text;
-    }
-}
+debugging('This file is no longer required in Moodle 4.5+. Please do not include/require it.', DEBUG_DEVELOPER);
 

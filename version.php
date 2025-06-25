@@ -30,8 +30,8 @@ $plugin->requires  = 2022041900;        // Requires this Moodle version.
 $plugin->component = 'filter_multiroot'; // Full name of the plugin (used for diagnostics).
 $plugin->release = '4.5.0 (Build 2025043000)';
 $plugin->maturity = MATURITY_RC;
-$plugin->supported = [403, 405];
-$plugin->dependencies = array('local_multiroot' => 2013100300);
+$plugin->supported = [405, 405];
+$plugin->dependencies = ['local_multiroot' => 2013100300];
 
 // Non moodle attributes.
 $plugin->codeincrement = '4.5.0000';
